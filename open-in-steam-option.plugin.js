@@ -14,7 +14,6 @@ module.exports = class {
       {
             this.unpatchFunctions.push(BdApi.ContextMenu.patch("message", (contextMenu, message) => {
 
-                  console.log(message);
                   let url = message.target.href ?? message.target.innerText;
                   if (!url || !this.isSteamURL(url)) return;
 
